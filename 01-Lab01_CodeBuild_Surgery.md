@@ -1,127 +1,113 @@
-# 🌷 Lab 01 – Create a CodeBuild Project & View Logs in CloudWatch
+# 🌷 Lab 01 – Build & Observe with CodeBridge + SkyWatch Logs (NordicVault Labs Edition)
 
 ---
 
-## ✨ Scenario: Mr. Eks2 Enters the Lab 🌤️
+## ✨ Scenario: Mr. Eks2 Arrives at NordicVault DevOps Theater 🌤️
 
-As the morning mist lifts over the virtual corridor of **Siraat DevOps Hospital**,  
-**Mr. Eks2** steps gently into the training theatre — a soft curiosity glimmering in his eyes.  
-He’s welcomed by **Sofia Zaymera**, ever-graceful, holding a clipboard, and **Kasper Madsen**, sipping his cinnamon coffee with a grin.
+It was a quiet morning in **NordicVault’s SkyWing Division**, when **Mr. Eks2** stepped into the digital chamber of DevOps exploration.  
+The lights were soft, the air carried the hum of pipelines waiting to be born.  
+He was met by **Kasper Madsen**, joyfully sipping elderflower tea, and **Sofia Zaymera**, radiating clarity.
 
-> “Today,” says **Kasper**, “you’ll learn how to build something from scratch — and then *watch it breathe.*”
+> “Today,” smiled **Kasper**, “you’re going to assist in a birth — a new build project using **CodeBridge**, our internal build engine.”
 
-> “We’re going to use **AWS CodeBuild** and view the heartbeat in **CloudWatch Logs**,” adds **Sofia**.
-
-> **Eks2** nods, “So this is where the code learns to walk?”
-
-They all smile.
+> “And when it breathes,” added **Sofia**, “you’ll watch its heartbeat in **SkyWatch Logs** — because every build deserves to be heard.”
 
 ---
 
-## 🛠️ Step-by-Step Journey Through the Healing Lab
+## 🛠️ Step-by-Step Walkthrough with Eks2 & Team
 
-### 🩺 Step 1: Signing into the Console
+### 🩺 Step 1: Entering the Console
 
-**Kasper** points to the screen. “Let’s enter the hospital. Open your AWS Console and choose the **us-east-1** region — it’s like choosing the calmest room in the hospital.”
+**Eks2** gently logs into the **Aurora Console**, the gateway to NordicVault’s cloud hospital.  
+He selects region `eu-north-2` (Nordhavn) — a calm and familiar space for first steps.
 
-**Sofia** reminds gently, “Never change the Account ID — this room is yours alone.”
-
-**Eks2**, thoughtful as always, asks, “Why us-east-1?”  
-**Kasper** chuckles, “Because that’s where our tools are sterilized and ready.”
+**Sofia** leans in, “Always choose a known ward — let your first patient breathe easy.”
 
 ---
 
-### 📦 Step 2: Exploring the Zip File of the Patient
+### 📦 Step 2: Exploring the Patient File
 
-They walk down to the **S3 storage wing**.  
-Inside a room labeled **“whizlabs...”**, they find a patient: `MessageUtil.zip`.
+Within the **FrystPak S3 Archive**, Eks2 finds a mysterious `.zip` file — named `WhisperCore.zip`.
 
-> **Sofia** lays the files on a table:  
-> - **pom.xml** (the build's DNA)  
-> - **buildspec.yml** (doctor's instructions)  
-> - Source code (`MessageUtil.java`)  
-> - Test file (`TestMessageUtil.java`)
+**Kasper** unpacks it like a surgeon preparing instruments:  
+- **buildspec.yml** – The operation script  
+- **pom.xml** – The molecular blueprint  
+- **HelloCloud.java**, **TestHelloCloud.java** – The spirit and the trial
 
-**Eks2** tilts his head, “So this buildspec file… tells the CodeBuild doctor what to do?”
-
-> “Exactly,” smiles **Kasper**, “It’s like a recipe — for healing.”
+**Eks2**, wide-eyed, whispers, “So the tests verify the soul?”
 
 ---
 
-### 🧺 Step 3: Creating an Artifact Bucket
+### 🧺 Step 3: Creating the Healing Vault
 
-Now they move to the **artifact archive**.
+They open **S3Safe**, a secure storage vault used by NordicVault.
 
-> “We need a place to save the healing results,” says **Sofia**.  
-> “Create a new **S3 bucket**, name it with care, and allow access — gently, responsibly.”
+> **Sofia** explains, “This is where all output will rest — warm, safe, and retrievable.”
 
-**Eks2** types: `codebuild-whiz-output-eks2`.  
-A perfect home for a future miracle.
+Eks2 names the bucket: `sky-output-whispertrail`.
 
 ---
 
-### 🧱 Step 4: Building the Project
+### 🧱 Step 4: Building in CodeBridge
 
-They walk into the **CodeBuild operating theatre**.
+The team enters the **CodeBridge Panel**.  
+Eks2 creates a project: `FirstWhisperBuild`.
 
-> “Time to create the project,” says **Kasper**.  
-> “Use **Amazon Linux** and **Corretto11** — they’re like healthy lungs and heart for the build.”
+**Kasper** configures the environment:  
+- OS: Aurora Linux  
+- Runtime: Corretto11  
+- Role: `NVCodeRunnerRole`
 
-**Sofia** sets the source as the S3 file, selects the artifact bucket, and enables CloudWatch logs.  
-The console glows.
+Artifacts go into the earlier bucket.  
+Logs are gently routed to **SkyWatch**.
 
-**Eks2** whispers, “It feels like setting up life support.”
-
----
-
-### 🏃‍♂️ Step 5: Start the Operation
-
-The team gathers.
-
-**Kasper** clicks **Start Build**.  
-They watch the phases complete: `INSTALL`, `PRE_BUILD`, `BUILD`, `POST_BUILD`.
-
-Logs stream like lifelines into **CloudWatch**.
-
-> “Every green line is a breath,” says **Sofia**.  
-> “You just helped something come alive.”
+**Eks2** breathes slowly. “This isn’t just a build. It’s a becoming.”
 
 ---
 
-### 📦 Step 6: Check the Artifacts
+### 🏃‍♂️ Step 5: Initiating the Operation
 
-They return to the bucket.  
-Inside, a file awaits: `messageUtil-1.0.jar`.
+He presses **Launch Build**. The console flickers.
 
-**Eks2** picks it up carefully. “This is the result?”
+Logs stream like morning sunlight — `INSTALL`, `PRE_BUILD`, `BUILD`, `POST_BUILD`.
 
-> “Yes,” nods **Sofia**, “a heartbeat, encoded in Java.”
+**Sofia** smiles, “Every phase, a pulse.”
 
----
-
-### 🧼 Step 7: Discharge the Patient
-
-“Now,” says **Kasper**, “delete the CodeBuild project. Let this one rest. You’ve done well.”
-
-**Eks2** sighs with quiet joy. His first DevOps procedure.
+In **SkyWatch**, lines of green, clean, and clear — this is life.
 
 ---
 
-## 🌍 Real-World Reflection: A Healing Skillset
+### 📦 Step 6: Observing the Result
 
-> Setting up **CodeBuild** and managing **CloudWatch Logs** is what real DevOps engineers do daily.  
-Whether it’s building microservices, compiling packages, or testing on the fly — this is the rhythm of production.  
-Today, you’ve joined that heartbeat.
+Inside the bucket:  
+`sky-output-whispertrail/FirstWhisperBuild/target/hello-1.0.jar`
+
+**Eks2** holds it digitally. “So fragile. So complete.”
+
+---
+
+### 🧼 Step 7: Farewell and Deletion
+
+They thank the build.  
+**Kasper** teaches Eks2 how to delete the project gently — like letting go of a patient who no longer needs the machine.
+
+---
+
+## 🌍 Real-World Reflection: What This Teaches
+
+> Learning how to build with **CodeBridge** (CodeBuild) and monitor via **SkyWatch Logs** (CloudWatch)  
+is the first real step for any DevOps engineer. This lab teaches not just tech — but clarity, control, and courage.
 
 ---
 
 ## 🔐 Real-World Reflection: A 158-Year Legacy Lost to One Weak Password
 
-In 2023, a **158-year-old UK firm collapsed** — all because of a **single compromised password**.  
-There were no logs. No alerts. No build validations.  
-Today’s lab — where you built, logged, and verified output — is your first line of defense.  
-By mastering logs and artifacts, you prevent shadows from entering.  
-Read the full story here: [BBC – Password Breach Collapse](https://www.bbc.com/news/articles/cx2gx28815wo)
+In 2023, a 158-year-old UK firm collapsed due to a single compromised password.  
+No logs. No artifact backups. No visibility.
+
+But in this lab, **you logged everything**, **tracked the build**, and **stored the artifacts**.  
+That’s more than a task — it’s future-proofing someone’s legacy.  
+🔗 [BBC News – How a Single Password Killed a Company](https://www.bbc.com/news/articles/cx2gx28815wo)
 
 ---
 
