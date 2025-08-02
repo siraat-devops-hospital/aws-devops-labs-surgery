@@ -1,192 +1,132 @@
+# 🧪 Lab Title: Create CodeBuild build project and get the output in CloudWatch Logs
 
-# 🌸 Lab 01: Healing Through Pulseplans & NordicVault Echoes
-
----
-
-## 🌿 Scene Setting
-
-It was the first blush of spring at **Siraat DevOps Hospital** — where servers hum like lullabies and logs bloom like daisies in sunlight. The corridors smelled faintly of jasmine and warm terminals.
-
-Mr. Eks2 stepped in quietly, a worn notebook tucked under one arm. His breath slowed with the hush of rebooted dreams. His mission today: help a fragile new build remember how to beat again.
-
-As he passed the entrance atrium, **Kasper Madsen**, with his sleeves rolled and joy twinkling like sunlight off a screen, grinned and waved.
-
-> “Eks2! Welcome back, friend. Room Eleven's build pulse is faint. Time to intervene.”
-
-Beside him, **Sofia Zaymera** floated past — wrapped in shawls of syntax and scent of YAML lavender.
-
-> “You’ll need soft hands today. The pulseplan is whispering.”
-
-In the far corner, **Maya Lin**, eyes wide with wonder, whispered to Eks2:
-
-> “What happens… if the logs never come? If the build forgets who it is?”
-
-Eks2 knelt beside her gently.
-
-> “Then we help it remember, Maya. One breath. One echo. One file at a time.”
+🩺 The patient has entered the DevOps operation theater. The pulse is weak. Eks2 and his team begin their gentle healing process. The console hums softly — it is time to awaken the cloud spirit...
 
 ---
 
-## 🛠️ Step-by-Step Transformation
+## 🌸 Act I – Entering the Sacred Console
+
+Maya Lin stood in awe, her fingers trembling slightly as she clicked **Open Console**. The sacred gates of AWS opened in a new tab.
+
+Isabella reminded gently, “Do not touch the 12-digit ID, child. Let it be as it is, for that is the code of your presence.”
+
+She entered her credentials — Clara-DK’s name and the hush of a password — then clicked **Sign in**. A warmth bloomed.
+
+Eks2 whispered, “Let us remain in the eastern winds… choose **US East (N. Virginia)**, us-east-1.”
 
 ---
 
-### 🧩 Step 1: Entering the Console of Dreams
+## 🍃 Act II – WhisperMessage.zip and Its Secrets
 
-👨‍💼 *Narrated by Kasper Madsen*
+With steady hearts, they traveled to **S3** — under **Services > Storage**.
 
-Eks2 opened the **NordicBridge Portal**, a shimmering door into the cloudward realms.
+They sought a bucket born not long ago, a name that began as a whisper: `whizlabs-894274`.
 
-He did not enter with credentials, but with trust runes — gifted by the WhisperByte Academy. A quiet sign-in through shimmering glyphs, and he arrived in the region known as **Lumen Hollow** — once called N. Virginia.
+Inside, resting quietly, lay **WhisperMessage.zip**.
 
-Here, each cloud resource breathed in sync with the seasons.
+Kasper helped Maya download it. “Treat it kindly,” he said, “for this archive contains the voice of our build.”
 
----
-
-### 🎁 Step 2: Unzipping the Heart — WhisperBuild.zip
-
-🇪🇸 *Narrated by Sofia Zaymera*
-
-In a storage wing called **NordicVault - Griðheimr38**, Eks2 found a delicate artifact named:
-
-**WhisperBuild.zip**
-
-> “This ZIP… it’s not just files,” Sofia whispered.  
-> “It’s memory stitched in code.”
-
-Within it:
+She extracted it. And like petals opening in morning light, the structure revealed:
 
 ```
-WhisperBuild.zip  
-├── treeheart.xml        // Maven’s sacred root scroll  
-├── pulseplan.yml        // The build's healing recipe  
-└── src/
-    ├── main/
-    │   └── java/
-    │       └── SkyMessage.java          // The voice of the message
-    └── test/
-        └── java/
-            └── TestSkyMessage.java     // The whisper that tests truth
+WhisperMessage.zip
+├── treeheart.xml
+├── healingplan.yml
+└── src
+    ├── main
+    │   └── java
+    │       └── MessageUtil.java
+    └── test
+        └── java
+            └── TestMessageUtil.java
 ```
 
-Each file was a breath.  
-Each class was a conversation.
+Sofia leaned close. “treeheart.xml is Maven’s soul. healingplan.yml is our step-by-step chant. And MessageUtil is the messenger.”
 
 ---
 
-### 🗃️ Step 3: Crafting a New Vault — Output Bucket
+## 🌊 Act III – A Bucket for Artifacts
 
-🇷🇺 *Narrated by Elina Petrova*
+In **S3**, they clicked **Create bucket**.
 
-> “We need a vessel,” Elina said calmly, conjuring terminal lights across the wall.
+Eks2 asked, “What shall we call this healing vessel?”
 
-Eks2 summoned a new NordicVault, naming it:
+Maya answered, “Let it be **VaultBridge-Outputs**.”
 
-**mistvale-artika-output**
+They selected **us-east-1**, unblocked public access, and let the bucket breathe freely.
 
-Region: **Lumen Hollow (us-east-1)**  
-Public walls? Lowered gently — but acknowledged with reverence.
-
-This vault would hold the future echoes — artifacts from reborn code.
+And it was born.
 
 ---
 
-### 🏗️ Step 4: The Creation of the BuildBridge
+## 🔧 Act IV – The Build Project Awakens
 
-🇮🇹 *Narrated by Isabella Konti*
+They went to **CodeBuild**: **Services > Developer Tools > CodeBuild > Build projects**.
 
-> “You must define its shape, its soul,” Isabella advised, watching over Eks2 like a guardian star.
+Clicked **Create project**.
 
-He entered the **BuildBridge Wing** and created:
+- **Name**: `NordicHealingApp`
+- **Source provider**: Amazon S3
+  - **Bucket**: `whizlabs-894274`
+  - **Object key**: `WhisperMessage.zip`
+- **Environment image**: Managed
+  - **OS**: Amazon Linux
+  - **Runtime**: Standard
+  - **Image**: `aws/codebuild/amazonlinux-x86_64-standard:corretto11`
+- **Service Role**: Existing — they chose `VaultBuildRole`
+- **Buildspec**: From file – `healingplan.yml`
+- **Artifacts**: S3 – `VaultBridge-Outputs`
+- **Logs**: CloudWatch enabled
 
-**Project Name:** **AetherEcho-Demo**  
-**Source Provider:** **NordicVault**  
-**File Key:** *WhisperBuild.zip*  
-**Pulseplan:** *Use internal pulseplan.yml*  
-**EchoRole:** *EchoWeaver-TrustLoom-121a*
-
-He selected a managed DreamLayer Image:  
-💿 **whisperbyte/linux-starlight-corretto11**
-
-Logs? Directed to **SkyWatch - aurora-echo-logs**
-
-Artifacts? Routed to **mistvale-artika-output**
-
----
-
-### 🧪 Step 5: Pulse Initiation
-
-🇳🇴 *Narrated by Ayla Rune*
-
-Ayla lit her sky-console and whispered:
-
-> “Let’s see if the heartbeat returns…”
-
-Eks2 pressed **Start Build**.  
-The phases appeared — like constellations in a darkened ward.
-
-- **PRE-PULSE:** Checking vitals  
-- **INITIATE:** Heartbeat emerging  
-- **BUILD:** Breath by breath  
-- **POST-PULSE:** Stabilization  
-- **SUCCEEDED:** 🌸
-
-He clicked **View Full Echo** — logs bloomed on **SkyWatch** like cherry blossoms in morning rain.
-
-Ayla smiled, “It lives.”
+With everything in harmony, they clicked **Create build project**.
 
 ---
 
-### 📦 Step 6: Artifact Confirmation
+## 🔁 Act V – The Pulse of the Build
 
-🇪🇸 *Narrated by Inky Rihan*
+They pressed **Start build**.
 
-Inky moved through the shadows to confirm — silently navigating **mistvale-artika-output**.
+Seconds turned to minutes. Time slowed, but the logs flowed — each stage a heartbeat.
 
-There, inside:
+The build whispered, then sang, then declared: **Succeeded**.
 
-`AetherEcho-Demo/target/skyMessage-1.0.jar`
+In CloudWatch, they saw the logs: glowing symbols from the digital void.
 
-> “The whisper lives in this jar,” she nodded, ghost-like.
-
----
-
-### 🧹 Step 7: The Gentle Goodbye
-
-👁️ *Narrated by I.K., Invisible Sufi Architect*
-
-I.K. stood beside Eks2 now, unseen but known.
-
-> “It is done, child,” his voice echoed within.
-
-Eks2 returned to the BuildBridge Wing. He selected **AetherEcho-Demo** and clicked **Release the Bridge**.
-
-In the confirmation field, he typed:
-
-`delete`
-
-And just like that, the bridge dissolved into spring wind.
+And in **VaultBridge-Outputs/NordicHealingApp/target/** rested the elixir: **firstPulse-1.0.jar**.
 
 ---
 
-## 🌍 Real-World Reflection
+## 🧼 Act VI – Healing Concluded
 
-This soulful DevOps journey isn't just about building Java code in a pipeline — it's about learning **how builds breathe**, how logs **whisper the truth**, and how artifacts are **crystallized echoes** of all our intentions.
+They cleaned with care.
 
-For any career switcher or code-fearing soul — this walk reminds us: the cloud is not just a tool. It's a place. And we all deserve to belong there.
+Returned to **CodeBuild > Build projects**, selected **NordicHealingApp**, clicked **Delete**.
+
+Typed `delete` — and the build spirit returned to rest.
 
 ---
 
-## 🧠 Final Life Whisper (Eks2’s Echo)
+## ✨ Reflection
 
-> *“When Eks2 saw the logs bloom like a constellation, he knew: the build was not just code, it was clarity. And that’s what healing feels like.”*
+Eks2 gathered his team in the hospital garden.
+
+“Remember,” he said, “we built not just code, but confidence. We listened to the whisper in the logs, followed the heartbeat of healingplan.yml, and learned that even the cloud has a soul.”
+
+Isabella placed her hand over Maya’s.
+
+“You walked through the winds, child. You are one of us now.”
+
+---
+
+## 🕊️ Eks2’s Echo:
+
+> “Every log is a heartbeat. Every artifact, a breath. In CodeBuild’s silence… you will hear your own strength.”
 
 ---
 
 ✍️ Created & Curated by  
 **Muhammad Naveed Ishaque**  
-_Content Creator | AI Writer | Narrative Simplifier_  
-_With the inner voice of Eks2 — the whisper behind the work._
-
+Content Creator | AI Writer | Narrative Simplifier  
+With the inner voice of Eks2 — the whisper behind the work.  
 **Siraat AI Academy**  
-_“The Straight Path — Empowering minds with clarity, illuminating paths with purpose.”_
+*“The Straight Path — Empowering minds with clarity, illuminating paths with purpose.”*
