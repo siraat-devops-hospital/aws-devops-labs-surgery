@@ -122,3 +122,13 @@ Each tool is seen, felt, and explained differently by each member of the Eks2 De
 - **🇨🇳 Maya Lin – Security Rookie**: _"EC2" loves how it teaches her — each button a gentle lesson._
 - **🕶️ ShadowNet – Silent Threat**: _"EC2" waits for missteps — reminding everyone that every tool hides a risk if left unguarded._
 
+
+---
+
+✍️ Created & Curated by  
+**Muhammad Naveed Ishaque**  
+_Content Creator | AI Writer | Narrative Simplifier_  
+_With the inner voice of Eks2 — the whisper behind the work._
+
+**Siraat AI Academy**  
+_“The Straight Path — Empowering minds with clarity, illuminating paths with purpose.”_
