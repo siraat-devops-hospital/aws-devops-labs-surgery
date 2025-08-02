@@ -21,7 +21,7 @@ Maya Lin gazes at the console door. “The pulse is slow… but steady.” Eks2 
 
 Inky retrieves a file from the archives — it reads: **WhisperMessage.zip**.
 
-1. In **S3**, under Storage, scroll through and find a newly created bucket — perhaps named `whizlabs-serenitystream-8472`.
+1. In **S3**, under Storage, scroll through and find a newly created bucket — perhaps named `whizlabs-healstream-2210`.
 2. Open it with reverence.
 3. Inside waits **WhisperMessage.zip** — quiet, zipped poetry.
 4. Download it. Unzip it like peeling away old bandages.
@@ -73,7 +73,7 @@ In the calmness that follows, you fill the details:
 
 ### Source
 - Provider: Amazon S3
-- Bucket: `whizlabs-serenitystream-8472`
+- Bucket: `whizlabs-healstream-2210`
 - Object key: `WhisperMessage.zip`
 
 ### Environment
