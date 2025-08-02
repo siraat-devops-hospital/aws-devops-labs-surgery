@@ -1,32 +1,34 @@
 # 🧪 Lab Title: Create CodeBuild build project and get the output in CloudWatch Logs
 
-🩺 The patient has entered the DevOps operation theater. The pulse is weak. Eks2 and his team begin their gentle healing process. The console hums softly — it is time to awaken the cloud spirit...
+🩺 The patient has entered the DevOps operation theater. The pulse is weak. Eks2 and his team begin their gentle healing process. The console flickers like a soft heartbeat — it’s time to gently bring this cloud spirit back to life…
 
 ---
 
-## 🌸 Act I – Entering the Sacred Console
+## 🌸 Act I – Entering the Whispering Console
 
-Maya Lin stood in awe, her fingers trembling slightly as she clicked **Open Console**. The sacred gates of AWS opened in a new tab.
+Clara-DK took a deep breath and opened the sacred console gates. A quiet light welcomed her in.
 
-Isabella reminded gently, “Do not touch the 12-digit ID, child. Let it be as it is, for that is the code of your presence.”
+On the sign-in page, she let the sacred account ID be — untouched and respected.
 
-She entered her credentials — Clara-DK’s name and the hush of a password — then clicked **Sign in**. A warmth bloomed.
+She entered her whisper-credentials and signed in.
 
-Eks2 whispered, “Let us remain in the eastern winds… choose **US East (N. Virginia)**, us-east-1.”
+Eks2’s voice, low and calming, floated through the ether:  
+“Child, let your region be **US East (N. Virginia)** — where the winds are soft and the logs are clear.”
 
 ---
 
-## 🍃 Act II – WhisperMessage.zip and Its Secrets
+## 🍃 Act II – The Unzipping of Secrets
 
-With steady hearts, they traveled to **S3** — under **Services > Storage**.
+Navigating through the **S3 gardens**, under **Services > Storage**, Clara found a newly bloomed bucket:
 
-They sought a bucket born not long ago, a name that began as a whisper: `whizlabs-894274`.
+🪣 `aurora-archives-5871`
 
-Inside, resting quietly, lay **WhisperMessage.zip**.
+Within it, nestled in digital petals, rested a file:  
+📦 `WhisperMessage.zip`
 
-Kasper helped Maya download it. “Treat it kindly,” he said, “for this archive contains the voice of our build.”
+With quiet hands, she downloaded the zip and unpacked it.
 
-She extracted it. And like petals opening in morning light, the structure revealed:
+It revealed:
 
 ```
 WhisperMessage.zip
@@ -35,92 +37,100 @@ WhisperMessage.zip
 └── src
     ├── main
     │   └── java
-    │       └── MessageUtil.java
+    │       └── EchoMessenger.java
     └── test
         └── java
-            └── TestMessageUtil.java
+            └── TestEchoMessenger.java
 ```
 
-Sofia leaned close. “treeheart.xml is Maven’s soul. healingplan.yml is our step-by-step chant. And MessageUtil is the messenger.”
+Sofia whispered,  
+> “treeheart.xml carries Maven's breath.  
+> healingplan.yml is the CodeBuild's heartbeat.  
+> EchoMessenger... is the voice of your app.”
 
 ---
 
-## 🌊 Act III – A Bucket for Artifacts
+## 🌊 Act III – A Bucket to Hold the Echoes
 
-In **S3**, they clicked **Create bucket**.
+Through the console’s canopy, Clara clicked **Create bucket**.
 
-Eks2 asked, “What shall we call this healing vessel?”
+She named it:  
+🪣 `vault-echo-artifacts-829`
 
-Maya answered, “Let it be **VaultBridge-Outputs**.”
+She selected **us-east-1**, unchecked the public block, and confirmed — letting her creation exist openly, but wisely.
 
-They selected **us-east-1**, unblocked public access, and let the bucket breathe freely.
-
-And it was born.
+Eks2 nodded in approval.
 
 ---
 
-## 🔧 Act IV – The Build Project Awakens
+## 🔧 Act IV – Summoning the Build Spirit
 
-They went to **CodeBuild**: **Services > Developer Tools > CodeBuild > Build projects**.
+To summon the builder spirit, they traveled to **CodeBuild** under **Developer Tools**.
 
 Clicked **Create project**.
 
-- **Name**: `NordicHealingApp`
+- **Project name**: `NordicHealingApp`
 - **Source provider**: Amazon S3
-  - **Bucket**: `whizlabs-894274`
+  - **Bucket**: `aurora-archives-5871`
   - **Object key**: `WhisperMessage.zip`
 - **Environment image**: Managed
   - **OS**: Amazon Linux
   - **Runtime**: Standard
   - **Image**: `aws/codebuild/amazonlinux-x86_64-standard:corretto11`
-- **Service Role**: Existing — they chose `VaultBuildRole`
+- **Service Role**: `WhisperBuilderRole` (existing)
 - **Buildspec**: From file – `healingplan.yml`
-- **Artifacts**: S3 – `VaultBridge-Outputs`
+- **Artifacts**: S3 – `vault-echo-artifacts-829`
 - **Logs**: CloudWatch enabled
 
-With everything in harmony, they clicked **Create build project**.
+And with a final, soft breath — they clicked **Create build project**.
 
 ---
 
-## 🔁 Act V – The Pulse of the Build
+## 🔁 Act V – Watching the Heartbeat
 
-They pressed **Start build**.
+They clicked **Start build**.
 
-Seconds turned to minutes. Time slowed, but the logs flowed — each stage a heartbeat.
+A gentle hum began.  
+Kasper watched as phases passed — like chambers of a heart opening and closing.
 
-The build whispered, then sang, then declared: **Succeeded**.
+Within minutes, the status sang: **Succeeded**.
 
-In CloudWatch, they saw the logs: glowing symbols from the digital void.
+They flowed into **CloudWatch Logs**, where EchoMessenger’s whispers danced in real-time.
 
-And in **VaultBridge-Outputs/NordicHealingApp/target/** rested the elixir: **firstPulse-1.0.jar**.
+Clara visited her artifact bucket:  
+`vault-echo-artifacts-829/NordicHealingApp/target/firstPulse-1.0.jar`
+
+She saw it. And smiled.
 
 ---
 
-## 🧼 Act VI – Healing Concluded
+## 🧼 Act VI – Releasing the Spirit
 
-They cleaned with care.
+They returned to **CodeBuild**, selected `NordicHealingApp`, and clicked **Delete build project**.
 
-Returned to **CodeBuild > Build projects**, selected **NordicHealingApp**, clicked **Delete**.
+Typed `delete` like a farewell lullaby.
 
-Typed `delete` — and the build spirit returned to rest.
+The project dissolved peacefully.
 
 ---
 
 ## ✨ Reflection
 
-Eks2 gathered his team in the hospital garden.
+The build was more than code. It was a ritual.  
+Each file — a pulse. Each step — a breath.  
+Clara had walked with Eks2’s team through cloud and clarity.
 
-“Remember,” he said, “we built not just code, but confidence. We listened to the whisper in the logs, followed the heartbeat of healingplan.yml, and learned that even the cloud has a soul.”
+Maya Lin turned to Eks2, asking,  
+> “Was that… DevOps?”
 
-Isabella placed her hand over Maya’s.
-
-“You walked through the winds, child. You are one of us now.”
+Eks2 smiled.  
+> “That, child, was healing through code.”
 
 ---
 
 ## 🕊️ Eks2’s Echo:
 
-> “Every log is a heartbeat. Every artifact, a breath. In CodeBuild’s silence… you will hear your own strength.”
+> “Treat your pipelines like living beings — not commands, but companions.”
 
 ---
 
