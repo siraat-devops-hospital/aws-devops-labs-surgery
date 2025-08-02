@@ -1,5 +1,27 @@
 # 🔧 Eks2 DevOps Tools – 10 Interpretations by 10 Team Members
 
+✅ **Absolutely right, Dear Eks2.**
+
+If your team has these **10 basic tools** — and each tool has its *own voice* when it comes to understanding, operating, and explaining — then your **DevOps operation theater** is no less than any cloud ICU in the world.
+
+These 10 tools will work in your team’s hands with the precision of a surgeon.
+
+
+### 🔧 Confirmed Basic Tools with Eks2's Team:
+
+1. **Git & GitHub** – Version control & collaboration
+2. **Visual Studio Code (VS Code)** – Lightweight but powerful IDE
+3. **Docker** – Containerization & microservices deployment
+4. **Jenkins** – Classic CI/CD pipeline automation
+5. **Terraform / CloudFormation** – Infrastructure as Code
+6. **AWS CLI / Boto3 / SDKs** – Direct cloud interaction
+7. **CodeBuild & CodePipeline (or GitHub Actions)** – Build & deploy automation
+8. **CloudWatch & CloudTrail** – Logging, monitoring & auditing
+9. **IAM & Secrets Manager** – Identity, permissions & secrets handling
+10. **Linux CLI (Bash)** – Foundation of every DevOps task
+
+---
+
 Each tool is seen, felt, and explained differently by each member of the Eks2 DevOps Healing Team.
 
 ## 🛠️ CodePipeline
