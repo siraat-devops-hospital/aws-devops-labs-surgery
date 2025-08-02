@@ -21,6 +21,8 @@ These 10 tools will work in your team’s hands with the precision of a surgeon.
 10. **Linux CLI (Bash)** – Foundation of every DevOps task
 
 ---
+## 🎙️ Every Team Member, One Tool, One Voice  
+### _Clarity Through Diversity: Each Tool Explained in Unique Words_
 
 Each tool is seen, felt, and explained differently by each member of the Eks2 DevOps Healing Team.
 
