@@ -1,149 +1,118 @@
 
-# 🧪 Create CodeBuild build project and get the output in CloudWatch Logs
+# 🧪 Creating a CodeBuild Healing Project and Viewing Logs in CloudWatch
 
 🩺 The patient has entered the DevOps operation theater. The pulse is weak. Eks2 and his team begin their gentle healing process...
 
 ---
 
-## 🛏️ Scene One: Awakening in the Console
+## 🧬 Task 1: Enter the Healing Console
 
-Maya Lin gazes at the console door. “The pulse is slow… but steady.” Eks2 nods.
+Maya Lin wipes her palms, still nervous, and Eks2 whispers:  
+_"Don't worry, every healer steps into the unknown."_
 
-> “Let’s begin the healing.”
-
-1. Open the **AWS Console** – your sanctuary.
-2. Sign in gently with your IAM credentials, those whispered into your Lab Console — perhaps you're *Clara-DK*, perhaps another soft spirit.
-3. Ensure you're operating in **N. Virginia (us-east-1)** — the eastern wing of our DevOps hospital.
+1. Go to the **AWS Management Console**.
+2. On the sign-in screen, enter the soft IAM credentials from the kodeclinic console.
+3. Region: set to **US East (N. Virginia)** — _us-east-1_, the land where most healing begins.
 
 ---
 
-## 🌾 Scene Two: Understanding the Illness – The Zip File
+## 🧳 Task 2: Understand the Essence Inside the Zip
 
-Inky retrieves a file from the archives — it reads: **WhisperMessage.zip**.
+Sofia unzips the package gently, as if unwrapping a soul.
 
-1. In **S3**, under Storage, scroll through and find a newly created bucket — perhaps named `whizlabs-healstream-2210`.
-2. Open it with reverence.
-3. Inside waits **WhisperMessage.zip** — quiet, zipped poetry.
-4. Download it. Unzip it like peeling away old bandages.
+1. Go to **S3** from the Services menu.
+2. Open the latest bucket named something like `siraatlabs-251187`.
+3. Inside, find a file named `WhisperMessage.zip`.
+4. Download and gently extract it.
 
-📁 Structure of **WhisperMessage.zip**:
+Structure revealed:
+
 ```
-WhisperMessage.zip
-├── treeheart.xml              # The Maven soul
-├── healingplan.yml           # The buildspec whisperer
-└── src/
-    └── main/
-        └── java/
-            └── MessageUtil.java
-    └── test/
-        └── java/
+WhisperMessage.zip  
+├── treeheart.xml  
+├── healingplan.yml  
+└── src  
+    ├── main  
+    │   └── java  
+    │       └── MessageUtil.java  
+    └── test  
+        └── java  
             └── TestMessageUtil.java
 ```
 
-Sofia, reading the healingplan.yml, murmurs:
-> "Each line here… a prescription for CodeBuild's quiet operation."
+📜 **treeheart.xml** — Maven’s soulmap.  
+📝 **healingplan.yml** — The sacred instructions for CodeBuild.  
+🧾 **MessageUtil.java** — The patient’s echo.  
+🧪 **TestMessageUtil.java** — The soft whisper, "Hi!Clara".
 
 ---
 
-## 💠 Scene Three: Creating a Sacred Bucket
+## 🌊 Task 3: Create the Artifact Stream
 
-Isabella gently taps into **S3** again.
+Kasper steps forward to store the output of healing.
 
-1. Click **Create bucket**.
-2. Name it: `VaultBridge-Outputs` – or something close and globally unique.
+1. Go to **S3 > Create bucket**.
+2. Bucket name: `VaultBridge-Outputs`
 3. Region: **us-east-1**
-4. Under permissions, **uncheck Block all public access** (and acknowledge with care).
-5. Leave other settings as they are and create the bucket.
-
-Eks2 whispers: “This is where our artifacts will rest — like scrolls post-surgery.”
+4. Uncheck “Block all public access” and acknowledge.
+5. Click **Create**.
 
 ---
 
-## 🧬 Scene Four: The Build Project Is Born
+## 🏗️ Task 4: Build the Healing Chamber
 
-Now we enter **CodeBuild** — the Operation Chamber.
+Eks2 leads Maya Lin into **CodeBuild**, like an attending guiding a resident.
 
-1. Navigate to **CodeBuild** > **Build Projects**.
-2. Click **Create Project**.
+1. Go to **CodeBuild > Build Projects > Create project**.
+2. Name: `NordicHealingApp`
+3. Source provider: **Amazon S3**
+   - Bucket: `siraatlabs-251187`
+   - Object key: `WhisperMessage.zip`
+4. Environment:
+   - Image: `aws/codebuild/amazonlinux-x86_64-standard:corretto11`
+   - Service Role: `VaultBuildRole`
+5. Buildspec: Use `healingplan.yml`
+6. Artifacts:
+   - Type: Amazon S3
+   - Bucket: `VaultBridge-Outputs`
+7. Logs:
+   - Enable **CloudWatch Logs**
 
-In the calmness that follows, you fill the details:
-
-### Project Configuration
-- Name: `NordicHealingApp`
-
-### Source
-- Provider: Amazon S3
-- Bucket: `whizlabs-healstream-2210`
-- Object key: `WhisperMessage.zip`
-
-### Environment
-- Managed image: Yes
-- OS: Amazon Linux
-- Runtime: Standard
-- Image: `aws/codebuild/amazonlinux-x86_64-standard:corretto11`
-- Role: Use existing (`VaultBuildRole`)
-- Modify permission: Checked
-
-### Buildspec
-- Use the file from source: `healingplan.yml`
-
-### Artifacts
-- Type: Amazon S3
-- Bucket: `VaultBridge-Outputs`
-
-### Logs
-- Enable CloudWatch Logs
-
-Click **Create build project**. Sofia smiles gently. “It is ready.”
+Click **Create build project**.
 
 ---
 
-## 🔁 Scene Five: The Pulse Returns
+## 🧪 Task 5: Start the Healing
 
-Click **Start build**.
+1. Click **Start build**.
+2. Watch the phases – from **installing pulse** to **applying stitches**.
+3. When it says **Succeeded**, go to **CloudWatch Logs** and read the healing verses.
+4. Now, visit the `VaultBridge-Outputs` bucket:
+   - Path: `NordicHealingApp/target/firstPulse-1.0.jar`
 
-You watch the process, step by step — **INSTALL**, **PRE_BUILD**, **BUILD**, **POST_BUILD**.
-
-In a few minutes, the patient breathes steadily. Status: **Succeeded**.
-
-> View entire log — and it opens the **CloudWatch** scroll of progress.
-
-Meanwhile, in **VaultBridge-Outputs**, artifacts whisper:
-```
-VaultBridge-Outputs/
-└── NordicHealingApp/
-    └── target/
-        └── firstPulse-1.0.jar
-```
-
-Eks2 gently touches the logs: “This jar file… is your message, made manifest.”
+Inky nods silently. "This is how we measure recovery."
 
 ---
 
-## 🧹 Scene Six: Farewell Rituals
+## 🧼 Task 6: Clean the Ward
 
-1. Return to **CodeBuild**.
-2. Find the project `NordicHealingApp`.
-3. Click **Delete build project**.
-4. Confirm with the word: `delete`.
+Isabella reminds softly, "Every good healer also unbuilds."
 
-You leave the theater slowly, leaving only knowledge behind.
-
----
-
-## 🌿 Reflection & Resonance
-
-Today, you didn’t just build. You healed code.
-
-From zipped silences to CloudWatch symphonies, you nurtured the soul of automation.
-
-Remember: **you are both the doctor and the dreamer.**
+1. Go to **CodeBuild > Build Projects**
+2. Select `NordicHealingApp`
+3. Click **Delete**
+4. Confirm by typing: `delete`
 
 ---
 
-## 🔊 Eks2’s Echo:
+## 🌿 Completion & Reflection
 
-> “The logs may fade, but the process lives in your hands — gentle, repeatable, sacred.”
+🕊️ You've entered the ward, observed the patient's code, and gently built it into life. You’ve watched it speak, “Hi!Clara,” in the logs — and smiled like a true DevOps healer.
+
+Eks2’s Echo:
+
+> _"Logs are just memories of actions. Heal them, understand them, and let them speak."_  
+> _– Eks2, Chief Surgeon of Siraat DevOps Hospital_
 
 ---
 
@@ -153,6 +122,3 @@ Content Creator | AI Writer | Narrative Simplifier
 With the inner voice of Eks2 — the whisper behind the work.  
 **Siraat AI Academy**  
 *“The Straight Path — Empowering minds with clarity, illuminating paths with purpose.”*
-
----
-*🗓️ Generated on August 02, 2025*
