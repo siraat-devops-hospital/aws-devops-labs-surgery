@@ -73,7 +73,7 @@ Every patient gets attention. Every learner gets love.
 
 ---
 
-## 🌍 Meet the 🌷 Eks2 DevOps Surgery Team
+# 🌍 Meet the 🌷 Eks2 DevOps Surgery Team
 
 ### 👁️ I.K. – *The Unseen Sufi Strategist*  
 🧠 **Role**: Spiritual DevOps Architect  
