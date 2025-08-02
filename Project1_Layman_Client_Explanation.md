@@ -1,5 +1,26 @@
 # 🧺 Project 1 – Build Automation for Layman Clients
 
+
+
+### 🧩 Understanding the Two Project Names
+
+You may notice two titles for this project:
+
+- **🛠️ Project 1: CI/CD Pipeline with CodeBuild & CloudWatch Logs**  
+- **🧺 Project 1 – Build Automation for Layman Clients**
+
+These are not different projects — they are just two different ways of looking at the same work.
+
+🔍 The first title is for engineers and technical teams.  
+🌸 The second is for you — the dreamers, creators, and startup builders.
+
+Think of it like this:  
+The **first name is the machine's blueprint**.  
+The **second name is the magic button** you press to watch it work.
+
+Both are real. Both are you. ✨
+
+---
 ## 🎯 Project Name:
 **"Set Up an Automatic Software Builder for the Client"**  
 (Real World: Build system using CodeBuild + S3 + Logs)
