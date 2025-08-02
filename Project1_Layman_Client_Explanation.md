@@ -53,11 +53,15 @@ All of this happens **automatically** — every time the client updates code.
 
 ## 🥁 Summary for Layman:
 
-> “Aap ek aisa **button** bana ke de rahe ho jise **dabaane se company ka software gets ready by itself** —  
-> without waking anyone up, without any mistake.  
->  
-> Aap ne sirf you didn’t just cut wood to build a house,  
-> **aap ne un ke you made a dream-touching machine.**” 💡🛠️
+
+
+**“You are creating a magical button — one that, when pressed, builds the company’s software all by itself —**
+**without waking anyone up, without a single mistake.**
+
+**You didn’t just cut wood to build a house —**
+**you built them a machine that gently touches their dreams.”** 💡🛠️
+
+
 
 ---
 
