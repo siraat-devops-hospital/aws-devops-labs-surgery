@@ -145,3 +145,155 @@ Which container image should be selected for Java 11 builds using Amazon Linux i
 ---
 
 (Questions 6–10 continue in same format...)
+
+
+---
+
+### **Question 6**
+
+📘 **Scenario:**  
+Aarav from Bangalore is working at **KodeHarbor** and wants to ensure that CodeBuild can access the source zip file located in S3. However, his build keeps failing with a permissions error.
+
+❓ **Question:**  
+Which of the following IAM permissions must be granted to the CodeBuild service role?
+
+**A.** s3:PutObject  
+**B.** s3:GetObject  
+**C.** s3:DeleteObject  
+**D.** s3:ListAllMyBuckets
+
+**Correct Answer: B**  
+
+💡 **Explanation:**  
+To read the source zip from S3, the CodeBuild role must have `s3:GetObject` permissions for the object.
+
+❌ **Why Others Are Wrong:**  
+- A: This allows uploading, not reading  
+- C: Deletion isn't required for builds  
+- D: Listing buckets isn't enough to access objects  
+
+📌 *Isabella reminds:*  
+"CodeBuild can’t read what it’s not allowed to open. Give it gentle access, not chaos."
+
+---
+
+### **Question 7**
+
+📘 **Scenario:**  
+At **NovaNest**, Tarek is reviewing a build project’s configuration. He notices the “Privileged” checkbox is unchecked. Ahmed warns him it may cause Docker builds to fail.
+
+❓ **Question:**  
+When should the “Privileged” mode be enabled in AWS CodeBuild?
+
+**A.** Always  
+**B.** Only when using CodePipeline  
+**C.** When Docker is required during build  
+**D.** Never
+
+**Correct Answer: C**  
+
+💡 **Explanation:**  
+Privileged mode is required when your build needs to run Docker commands inside the container.
+
+❌ **Why Others Are Wrong:**  
+- A: It shouldn't be enabled by default due to security risks  
+- B: CodePipeline usage doesn't imply privileged mode  
+- D: Sometimes it's necessary, especially for containerized builds  
+
+📌 *Eks2’s Whisper:*  
+"When building containers, let your build run free — but not unsupervised."
+
+---
+
+### **Question 8**
+
+📘 **Scenario:**  
+Lina from **WhisperForge** finishes a CodeBuild project and stores artifacts in S3. She notices each artifact is stored in folders based on project name.
+
+❓ **Question:**  
+What determines the folder structure in the artifact S3 bucket?
+
+**A.** The IAM role name  
+**B.** The CodeBuild project name  
+**C.** The runtime image  
+**D.** The CodePipeline stage name
+
+**Correct Answer: B**  
+
+💡 **Explanation:**  
+The project name defines the logical folder structure within the specified S3 artifacts bucket.
+
+❌ **Why Others Are Wrong:**  
+- A: Role names do not influence S3 structure  
+- C: Runtime only affects environment  
+- D: Not relevant unless integrated with CodePipeline  
+
+📌 *Side Note from Maya Lin:*  
+“Every project leaves a footprint — even in a bucket.”
+
+---
+
+### **Question 9**
+
+📘 **Scenario:**  
+Naomi and Jia are reviewing the different build phases visible in the CodeBuild logs at **SereneStacks**. They observe `INSTALL`, `PRE_BUILD`, `BUILD`, and `POST_BUILD` sections.
+
+❓ **Question:**  
+Which file defines the commands executed in these build phases?
+
+**A.** IAM trust policy  
+**B.** CloudFormation script  
+**C.** buildspec.yml  
+**D.** build-lifecycle.txt
+
+**Correct Answer: C**  
+
+💡 **Explanation:**  
+The `buildspec.yml` file outlines the commands and environment variables for each build phase.
+
+❌ **Why Others Are Wrong:**  
+- A: Trust policies define role assumptions  
+- B: CloudFormation creates infrastructure, not build instructions  
+- D: Not a valid AWS configuration file  
+
+📌 *Inky observes:*  
+"Your healingplan is not just a file — it’s a heartbeat map."
+
+---
+
+### **Question 10**
+
+📘 **Scenario:**  
+At **CloudPetal**, Leif notices the artifacts uploaded to S3 do not contain the expected `.jar` file. He suspects the target folder is missing from the build process.
+
+❓ **Question:**  
+Which part of the buildspec file should ensure that the `.jar` file is correctly output and stored?
+
+**A.** `version`  
+**B.** `phases`  
+**C.** `artifacts`  
+**D.** `env`
+
+**Correct Answer: C**  
+
+💡 **Explanation:**  
+The `artifacts` section in the `buildspec.yml` defines which files or folders should be packaged and sent to the S3 bucket.
+
+❌ **Why Others Are Wrong:**  
+- A: Version is metadata  
+- B: Phases define actions, not outputs  
+- D: `env` handles environment variables, not output logic  
+
+📌 *Eks2’s Final Whisper:*  
+“Artifacts are not just files — they are your footprints in time.”
+
+---
+
+✍️ Created & Curated by  
+**Muhammad Naveed Ishaque**  
+Content Creator | AI Writer | Narrative Simplifier  
+With the inner voice of Eks2 — the whisper behind the work.  
+**Siraat AI Academy**  
+*“The Straight Path — Empowering minds with clarity, illuminating paths with purpose.”*
+
+---
