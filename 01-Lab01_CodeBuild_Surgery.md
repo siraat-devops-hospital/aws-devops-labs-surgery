@@ -1,131 +1,136 @@
-# 🌷 Lab 01 – CodeBuild & CloudWatch: Healing Through the Console
+# 🌷 Lab 01 – Create a CodeBuild Project & View Logs in CloudWatch
 
 ---
 
-## 🌸 Stage 1 – What This Lab Aims to Heal 🎯
+## ✨ Scenario: Mr. Eks2 Enters the Lab 🌤️
 
-In this first operation, our patient is **"CodeBuild Anxiety"** — the fear of setting up a build pipeline from scratch.  
-This lab walks you gently through the journey of creating your very first AWS CodeBuild project and seeing the live logs flow like **oxygen** through CloudWatch.
+As the morning mist lifts over the virtual corridor of **Siraat DevOps Hospital**,  
+**Mr. Eks2** steps gently into the training theatre — a soft curiosity glimmering in his eyes.  
+He’s welcomed by **Sofia Zaymera**, ever-graceful, holding a clipboard, and **Kasper Madsen**, sipping his cinnamon coffee with a grin.
 
-By the end, you will:
+> “Today,” says **Kasper**, “you’ll learn how to build something from scratch — and then *watch it breathe.*”
 
-- Understand the structure of real-world Java project components (pom.xml, buildspec.yml)
-- Create a CodeBuild project linked to an S3 source
-- Store build artifacts safely
-- View logs and outputs in CloudWatch
-- Leave behind the fear of AWS console navigation
+> “We’re going to use **AWS CodeBuild** and view the heartbeat in **CloudWatch Logs**,” adds **Sofia**.
 
-> 💖 This lab is a fresh breath for any layman wondering, *“Can I really do DevOps?”*  
-Yes. And we’ll show you — gently, with clarity.
+> **Eks2** nods, “So this is where the code learns to walk?”
+
+They all smile.
 
 ---
 
-## 🛠️ Stage 2 – How to Complete This Lab (Procedure) 🩺
+## 🛠️ Step-by-Step Journey Through the Healing Lab
 
-### ✨ Step-by-step Procedure:
+### 🩺 Step 1: Signing into the Console
 
-1. **Sign into AWS Console**  
-   - Use the given IAM credentials  
-   - Select **us-east-1** (N. Virginia) as your region
+**Kasper** points to the screen. “Let’s enter the hospital. Open your AWS Console and choose the **us-east-1** region — it’s like choosing the calmest room in the hospital.”
 
-2. **Explore the Sample Project**  
-   - Navigate to **S3**, locate the `MessageUtil.zip` file in the `whizlabs-<random>` bucket  
-   - Download and unzip it — observe:  
-     - `pom.xml` – for Maven  
-     - `buildspec.yml` – for CodeBuild  
-     - `MessageUtil.java`, `TestMessageUtil.java` – source and test files
+**Sofia** reminds gently, “Never change the Account ID — this room is yours alone.”
 
-3. **Create an Output S3 Bucket**  
-   - Name it something like `codebuild-whiz-output-{yourname}`  
-   - Uncheck “Block all public access” and acknowledge the change
-
-4. **Create the CodeBuild Project**  
-   - Name: `WhizDemo`  
-   - Source: `Amazon S3`, point to `MessageUtil.zip`  
-   - Environment: Managed Image → Amazon Linux → Corretto11  
-   - BuildSpec: Use `buildspec.yml`  
-   - Artifacts: Store in your created output bucket  
-   - Logging: Enable CloudWatch logs
-
-5. **Run the Build**  
-   - Click **Start build**  
-   - Wait 2–5 mins until status shows: ✅ `SUCCEEDED`  
-   - View full logs via CloudWatch  
-   - Check artifact in S3 bucket → `WhizDemo/target/messageUtil-1.0.jar`
-
-6. **Clean Up**  
-   - Delete the build project from CodeBuild after completion  
-   - Sign out from AWS Console
+**Eks2**, thoughtful as always, asks, “Why us-east-1?”  
+**Kasper** chuckles, “Because that’s where our tools are sterilized and ready.”
 
 ---
 
-## ⚙️ Stage 3 – Tools Involved in This Operation 🛠
+### 📦 Step 2: Exploring the Zip File of the Patient
 
-| Tool | Role |
-|------|------|
-| **AWS CodeBuild** | Builds source code using defined specs |
-| **AWS S3** | Stores source and output artifacts |
-| **AWS CloudWatch** | Displays logs and build statuses |
-| **buildspec.yml** | Defines the build instructions |
-| **pom.xml** | Maven config for the Java project |
+They walk down to the **S3 storage wing**.  
+Inside a room labeled **“whizlabs...”**, they find a patient: `MessageUtil.zip`.
 
----
+> **Sofia** lays the files on a table:  
+> - **pom.xml** (the build's DNA)  
+> - **buildspec.yml** (doctor's instructions)  
+> - Source code (`MessageUtil.java`)  
+> - Test file (`TestMessageUtil.java`)
 
-## 🌍 Stage 4 – Real-World Healing (Job Use Case) 🌱
+**Eks2** tilts his head, “So this buildspec file… tells the CodeBuild doctor what to do?”
 
-> This lab simulates what DevOps engineers do every day:  
-**Automate builds, track logs, and ship safe artifacts.**
-
-In companies, you’ll:
-- Pull code from GitHub/S3
-- Define CI pipelines
-- Use CodeBuild or Jenkins
-- Monitor builds and logs via CloudWatch or ELK
-
-Doing this lab makes you **“pipeline-literate”** — you understand how code turns into deployable packages.
+> “Exactly,” smiles **Kasper**, “It’s like a recipe — for healing.”
 
 ---
 
-## 🎙️ Stage 5 – Interview Wisdom 💬
+### 🧺 Step 3: Creating an Artifact Bucket
 
-Here are questions recruiters may ask (and you’ll now answer like a whispering expert):
+Now they move to the **artifact archive**.
 
-1. **What is CodeBuild? How does it differ from Jenkins?**  
-2. **What are the key components of buildspec.yml?**  
-3. **How do you store artifacts from a build job?**  
-4. **How can you troubleshoot failed builds?**  
-5. **How does CloudWatch help monitor build processes?**  
-6. **What are IAM permissions required for CodeBuild to access S3?**  
-7. **What’s the difference between build and deploy stages in CI/CD?**
+> “We need a place to save the healing results,” says **Sofia**.  
+> “Create a new **S3 bucket**, name it with care, and allow access — gently, responsibly.”
+
+**Eks2** types: `codebuild-whiz-output-eks2`.  
+A perfect home for a future miracle.
 
 ---
 
-## 🛏️ ICU Ward Support 🧚‍♀️
+### 🧱 Step 4: Building the Project
 
-If something breaks:
-- Reread the **buildspec.yml**
-- Check IAM Role permissions
-- Use **CloudWatch logs** — they whisper the truth
-- Ask Maya Lin — if she gets stuck, the whole team rallies
+They walk into the **CodeBuild operating theatre**.
+
+> “Time to create the project,” says **Kasper**.  
+> “Use **Amazon Linux** and **Corretto11** — they’re like healthy lungs and heart for the build.”
+
+**Sofia** sets the source as the S3 file, selects the artifact bucket, and enables CloudWatch logs.  
+The console glows.
+
+**Eks2** whispers, “It feels like setting up life support.”
 
 ---
 
-## 🩵 Final Whisper from Eks2
+### 🏃‍♂️ Step 5: Start the Operation
 
-> “This wasn’t just a lab.  
-It was your **first breath in the DevOps operating room**.  
-The logs you saw? That’s not output — that’s *life signs*.  
-And today, you brought a project to life.”  
+The team gathers.
 
-You’re ready now.
+**Kasper** clicks **Start Build**.  
+They watch the phases complete: `INSTALL`, `PRE_BUILD`, `BUILD`, `POST_BUILD`.
+
+Logs stream like lifelines into **CloudWatch**.
+
+> “Every green line is a breath,” says **Sofia**.  
+> “You just helped something come alive.”
+
+---
+
+### 📦 Step 6: Check the Artifacts
+
+They return to the bucket.  
+Inside, a file awaits: `messageUtil-1.0.jar`.
+
+**Eks2** picks it up carefully. “This is the result?”
+
+> “Yes,” nods **Sofia**, “a heartbeat, encoded in Java.”
+
+---
+
+### 🧼 Step 7: Discharge the Patient
+
+“Now,” says **Kasper**, “delete the CodeBuild project. Let this one rest. You’ve done well.”
+
+**Eks2** sighs with quiet joy. His first DevOps procedure.
+
+---
+
+## 🌍 Real-World Reflection: A Healing Skillset
+
+> Setting up **CodeBuild** and managing **CloudWatch Logs** is what real DevOps engineers do daily.  
+Whether it’s building microservices, compiling packages, or testing on the fly — this is the rhythm of production.  
+Today, you’ve joined that heartbeat.
+
+---
+
+## 🔐 Real-World Reflection: A 158-Year Legacy Lost to One Weak Password
+
+In 2023, a **158-year-old UK firm collapsed** — all because of a **single compromised password**.  
+There were no logs. No alerts. No build validations.  
+Today’s lab — where you built, logged, and verified output — is your first line of defense.  
+By mastering logs and artifacts, you prevent shadows from entering.  
+Read the full story here: [BBC – Password Breach Collapse](https://www.bbc.com/news/articles/cx2gx28815wo)
 
 ---
 
 ________________________________________  
 ✍️ Created & Curated by  
 **Muhammad Naveed Ishaque**  
-Content Creator | AI Writer | Narrative Simplifier  
-With the inner voice of Eks2 — the whisper behind the work.  
+_Content Creator | AI Writer | Narrative Simplifier_  
+_With the inner voice of Eks2 — the whisper behind the work._
+
 **Siraat AI Academy**  
-*“The Straight Path — Empowering minds with clarity, illuminating paths with purpose.”*  
+_“The Straight Path — Empowering minds with clarity, illuminating paths with purpose.”_  
 ________________________________________
