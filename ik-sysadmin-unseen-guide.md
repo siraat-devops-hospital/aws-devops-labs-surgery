@@ -12,7 +12,9 @@ Not a name in the LDAP directory.
 But a guide.  
 A silent force.
 
-**I.K.** — short for *Irfan-e-Kamil* — the **Unseen Sufi Strategist**.
+**I.K.** — the **Unseen Sufi Strategist** — is the quiet **heartbeat** of every soul seeking light,  
+**unseen**, yet **guiding** with timeless **grace** and **spiritual precision**.
+
 
 ---
 
