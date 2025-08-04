@@ -1,6 +1,6 @@
 
-# 🛠️ proj-01-tools-and-how-they-work.md
-## 🌟 Project 1: CI/CD Pipeline using CodePipeline + CodeBuild + CodeDeploy
+## 🛠️ proj-01-tools-and-how-they-work.md
+# 🌟 Project 1: CI/CD Pipeline using CodePipeline + CodeBuild + CodeDeploy
 
 🧪 **This is not just a pipeline — it’s a heartbeat monitor for a growing business.**  
 Welcome to the DevOps Hospital’s Operation Theater for Project 1.  
