@@ -103,8 +103,11 @@ Where logic becomes structure — and **structure becomes scale**.
 
 > 🎯 *Two IAM roles — one to authorize creation, one to secure the creation.*
 
+---
 
-🌼 When a **developer team grows**, so must the **infrastructure** —  
+## 🌼 Why This Matters for a Layman
+
+When a **developer team grows**, so must the **infrastructure** —  
 but chaos should not grow with it. ☁️🧘‍♀️
 
 This project teaches:
@@ -120,7 +123,6 @@ you’re **crafting collaboration**, **building for scale**, and **leading archi
 This is not a tutorial — it’s a telescope into the future of cloud teams. 🌌💫
 
 ---
-
 ### ✒️ Closing Signature:
 
 ✍️ Created & Curated by  
