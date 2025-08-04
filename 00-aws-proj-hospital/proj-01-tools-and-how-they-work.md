@@ -81,6 +81,16 @@ Here, we introduce you to the tools that make automation magical — and you’l
 
 ---
 
+## 📋 Summary List of Tools (for Easy Familiarity)
+
+1. AWS CodePipeline  
+2. AWS CodeBuild  
+3. AWS CodeDeploy  
+4. GitHub  
+5. Amazon EC2
+
+---
+
 ## 🌼 Why This Matters for a Layman
 
 This is the **“DevOps Hello World”** — your first chance to  
