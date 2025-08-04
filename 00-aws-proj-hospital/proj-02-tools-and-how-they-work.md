@@ -1,6 +1,6 @@
 
-# 🛠️ proj-02-tools-and-how-they-work.md
-## 🌟 Project 2: EC2 Deployment Using CloudFormation
+## 🛠️ proj-02-tools-and-how-they-work.md
+# 🌟 Project 2: EC2 Deployment Using CloudFormation
 
 🧪 **This isn’t just launching a server — it’s orchestrating a dream in code.**  
 Welcome back to the DevOps Hospital, where our next patient — Project 2 — is all about giving life to infrastructure… with **just a click**.
