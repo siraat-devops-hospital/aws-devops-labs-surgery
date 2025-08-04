@@ -1,4 +1,3 @@
-
 ## 🛠️ proj-10-tools-and-how-they-work.md
 # 🌟 Project 10: Deploying Nested CloudFormation Stacks
 
@@ -90,6 +89,22 @@ Where logic becomes structure — and **structure becomes scale**.
 
 ---
 
+##
+
+
+## 🧰 Summary List of Tools
+
+1. **AWS CloudFormation** – The architect’s pen that draws your infra as code.
+2. **Amazon S3** – The quiet librarian — stores templates so CloudFormation can read them.
+3. **IAM (Execution Role)** – The guardian that grants permission for CloudFormation to act.
+4. **Amazon EC2** – The working horse, a virtual server that runs your apps.
+5. **Amazon VPC** – The invisible fence, defining your network and its boundaries.
+6. **IAM (Provisioned Role)** – The identity given to the EC2 so it can act securely once launched.
+
+> 🎯 *Two IAM roles — one to authorize creation, one to secure the creation.*
+
+---
+
 ## 🌼 Why This Matters for a Layman
 
 When a **developer team grows**, so must the **infrastructure** —  
@@ -108,7 +123,6 @@ you’re **crafting collaboration**, **building for scale**, and **leading archi
 This is not a tutorial — it’s a telescope into the future of cloud teams. 🌌💫
 
 ---
-
 ### ✒️ Closing Signature:
 
 ✍️ Created & Curated by  
