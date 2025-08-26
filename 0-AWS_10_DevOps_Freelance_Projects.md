@@ -1,50 +1,123 @@
-# 🚀 Top 10 AWS DevOps Freelance Projects — Execution Mode
-_Built for delivery, not just theory._
+# 🚀 Top 10 AWS DevOps Freelance Projects (Execution Mode)
+### _Built for delivery, not just theory – by Eks2's Freelance Command Center_
 
-**Purpose:** Learn-by-shipping projects you can demo to clients, document on GitHub, and present on YouTube.
+📅 **Generated on:** August 02, 2025
 
-**Last updated:** <!-- set via badge or commit date -->
+Each project is designed to be:
+- 📦 Client-ready
+- 📄 GitHub-documented
+- 🎥 YouTube-presentable
+- 💰 Freelance-deliverable
 
-## 🧰 Prerequisites
-- AWS account (Owner for setup, then scoped down), default region (e.g., `eu-north-1`), AWS CLI v2 logged in
-- Node.js or Python (for Lambda samples), Docker (for ECR/ECS), Git
-- IAM user with programmatic access for CI where applicable
+---
 
-## 🛡️ Guardrails (read first)
-- **Costs:** Most projects fit Free Tier if small. Always review pricing.  
-- **Cleanup:** Each project includes a teardown script/section — **run it** after testing.  
-- **Security:** Least-privilege IAM, no plaintext secrets, resource tagging `Project=DevOps-Top10`.
+## 🌟 Project 1: CI/CD Pipeline with CodeBuild + CodeDeploy + CodePipeline
 
-## 🗺️ How to use this repo
-1) Pick a project from the table. 2) Open its folder → follow `README`. 3) Record a short demo.  
-**Freelance bonus:** Each project includes acceptance criteria & a mini SOW snippet.
+**Goal:** Automate the build, test, and deploy process of a sample app to EC2  
+**Deliverables:**
+- ✅ CI/CD Pipeline YAML
+- ✅ Sample app (Hello World)
+- ✅ GitHub repo + README
+- ✅ YouTube explanation
 
-## 📊 Projects at a glance
+---
 
-| # | Project | AWS Services | Difficulty | Est. Cost* | Folder |
-|---|---------|--------------|------------|------------|--------|
-| 1 | CI/CD: CodeBuild → CodeDeploy → CodePipeline | CodeCommit/Hub, CodeBuild, CodeDeploy, EC2 | ⭐⭐ | Low | `/01-cicd-codepipeline/` |
-| 2 | EC2 via CloudFormation (IaC) | CFN, EC2, SSM | ⭐ | Low | `/02-cfn-ec2/` |
-| 3 | S3 → Lambda → SES notify | S3, Lambda, SES | ⭐⭐ | Low | `/03-s3-lambda-ses/` |
-| 4 | Secrets Manager with Lambda | Lambda, Secrets Manager, IAM | ⭐⭐ | Low | `/04-lambda-secrets/` |
-| 5 | Docker → ECR → ECS | ECR, ECS Fargate, CloudWatch | ⭐⭐⭐ | Low–Med | `/05-ecr-ecs/` |
-| 6 | CloudWatch logs & alarms | CloudWatch, SNS | ⭐ | Low | `/06-cw-alarms/` |
-| 7 | Config + GuardDuty | AWS Config, GuardDuty, S3 | ⭐⭐ | Low | `/07-config-guardduty/` |
-| 8 | Step Functions workflow | Step Functions, Lambda | ⭐⭐ | Low | `/08-step-functions/` |
-| 9 | Inspector for EC2 | Inspector, EC2, SSM | ⭐⭐ | Low | `/09-inspector/` |
-|10 | Nested CloudFormation | CFN (nested) | ⭐⭐ | Low | `/10-cfn-nested/` |
+## 🌟 Project 2: EC2 Deployment using CloudFormation
 
-\* _Costs depend on usage/region; tear down resources after demos._
+**Goal:** Launch EC2 instances with full setup via IaC  
+**Deliverables:**
+- ✅ CloudFormation templates
+- ✅ User data script
+- ✅ GitHub repo
+- ✅ YouTube deployment walkthrough
 
-## 🧾 Deliverable conventions
-- `README.md` (intro, arch diagram, steps, cleanup)
-- `architecture.mmd` (Mermaid diagram)
-- `policy.json` (least-privilege)
-- `pipeline.yml` / `template.yaml`
-- `demo-script.md` (2–4 min talking points)
-- `SOW-snippet.md` + `acceptance-criteria.md`
-- `cleanup.sh` / `cleanup.ps1`
+---
 
-## 📝 License & support
-- License: MIT (recommended)  
-- Issues: open a GitHub Issue with repro steps and logs (no secrets).
+## 🌟 Project 3: Lambda + S3 Event Trigger Notification
+
+**Goal:** Upload to S3 triggers Lambda function to send email (SES)  
+**Deliverables:**
+- ✅ Lambda function code
+- ✅ S3 setup + permissions
+- ✅ GitHub + YouTube tutorial
+
+---
+
+## 🌟 Project 4: IAM Roles and Secrets Manager Integration
+
+**Goal:** Use Secrets Manager with Lambda securely  
+**Deliverables:**
+- ✅ Secure role policy
+- ✅ Lambda function using secrets
+- ✅ GitHub doc + YouTube video
+
+---
+
+## 🌟 Project 5: Dockerize an App + Push to ECR + Deploy via ECS
+
+**Goal:** Full Docker lifecycle with ECR and ECS  
+**Deliverables:**
+- ✅ Dockerfile + App
+- ✅ ECR push script
+- ✅ ECS task definition
+- ✅ GitHub + YouTube
+
+---
+
+## 🌟 Project 6: CloudWatch Logs + Alarms for EC2 and Lambda
+
+**Goal:** Monitor logs and send alerts via SNS  
+**Deliverables:**
+- ✅ Log group setup
+- ✅ Alarm configuration
+- ✅ GitHub doc + Alerting video
+
+---
+
+## 🌟 Project 7: AWS Config + GuardDuty Setup
+
+**Goal:** Audit and detect security risks  
+**Deliverables:**
+- ✅ Config rules setup
+- ✅ GuardDuty enabled + findings exported
+- ✅ GitHub + Demo video
+
+---
+
+## 🌟 Project 8: Serverless Workflow with Step Functions
+
+**Goal:** Multi-step Lambda workflow using Step Functions  
+**Deliverables:**
+- ✅ Workflow definition
+- ✅ All Lambda functions
+- ✅ GitHub code + YouTube walk-through
+
+---
+
+## 🌟 Project 9: EC2 Vulnerability Scan with Inspector
+
+**Goal:** Install Amazon Inspector and detect vulnerabilities  
+**Deliverables:**
+- ✅ Inspector setup
+- ✅ Scan report sample
+- ✅ GitHub + scan explanation video
+
+---
+
+## 🌟 Project 10: Deploying Nested Stacks with CloudFormation
+
+**Goal:** Modular IaC using nested stacks  
+**Deliverables:**
+- ✅ Parent-child template setup
+- ✅ Reusable modules
+- ✅ GitHub + detailed documentation
+
+---
+
+✍️ Created & Curated by  
+**Muhammad Naveed Ishaque**  
+_Content Creator | AI Writer | Narrative Simplifier_  
+_With the inner voice of Eks2 — the whisper behind the work._
+
+**Siraat AI Academy**  
+_“The Straight Path — Empowering minds with clarity, illuminating paths with purpose.”_
