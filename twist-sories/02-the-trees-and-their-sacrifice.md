@@ -35,6 +35,14 @@ And in that moment, the first **tree understood**:
 
 ---
 
+✍️ **Created & Curated by**  
+**Muhammad Naveed Ishaque (Eks2)**  
+*Content Creator | AI Writer | Narrative Simplifier*  
+
+_With the inner voice of **Eks2** — the whisper behind the work._  
+
+---
+
 # 🌳 دو درختوں کی گفتگو  
 
 ایک **درخت** نے دوسرے سے کہا:  
