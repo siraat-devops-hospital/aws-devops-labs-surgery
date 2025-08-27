@@ -1,27 +1,43 @@
-# ☕ The Soliloquy of a Tea Leaf  
+# 🍃 **The Whisper of Tea Leaves – A Gentle Confession**
 
-"What am I? What should I tell you?  
-I am nothing but the humble **tea leaf**...  
+*"What am I? Who shall I tell you I am?"*  
 
-People grab me and throw me straight into the **flames of the stove**.  
-If they take me out too soon, they complain:  
-'It’s still **raw**, boil it more!'  
+I am but a handful of **tea leaves**,  
+**plucked**, **pressed**, and **thrown into the fire**.  
 
-Yes… that is me:  
-**Boil me, and boil me more…**  
-Extract every drop of what I carry inside.  
+🔥 People **seize me**,  
+**drop me** into **boiling water**,  
+and say —  
+*"**Brew more… brew more…**"*  
 
-But here’s the truth —  
-when I release my **color**, my **aroma**, my **warmth**…  
-you suddenly feel **alive**,  
-your **fatigue** melts away.  
+If **taken out too soon**, they complain —  
+*"**Too raw… let it cook further.**"*  
+So I **endure the heat**,  
+until **every drop of my essence** is poured away.  
 
-That… is my moment of **joy**. 🌿  
+☕ And yet, when I **dissolve**,  
+you **come alive**.  
+Your **fatigue vanishes**,  
+your **mind awakens**,  
+and your **lips curl into comfort**.  
 
-Yet, remember this —  
-sometimes, just **enjoy me** gently,  
-for if I become your **addiction**,  
-I can also turn into your **danger**…" ⚡  
+That — is my **secret joy**.
+But remember this —  
+sometimes, just **enjoy me gently**.  
+For if I become your **addiction**,  
+I can also turn into your **danger** ⚡  
+
+---
+
+✍️ **Created & Curated by**  
+**Muhammad Naveed Ishaque (Eks2)**  
+*Content Creator | AI Writer | Narrative Simplifier*  
+
+_With the inner voice of **Eks2** — the whisper behind the work._  
+
+🕊️ **Siraat AI Academy**  
+*“The Straight Path — Empowering minds with clarity, illuminating paths with purpose.”*  
+
 
 ---
 
