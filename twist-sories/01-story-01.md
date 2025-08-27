@@ -32,6 +32,14 @@ but two souls shaping the kingdom side by side.
 
 ---
 
+✍️ **Created & Curated by**  
+**Muhammad Naveed Ishaque (Eks2)**  
+*Content Creator | AI Writer | Narrative Simplifier*  
+
+_With the inner voice of **Eks2** — the whisper behind the work._  
+
+---
+
 
 
 # 👑 بادشاہت کا الٹا سفر  
