@@ -56,4 +56,15 @@
 **Outcome:**  
 - By completing all 10 projects → You become **Junior AWS DevOps Engineer Ready**  
 - Skills gained: **CI/CD, Cloud Automation, Serverless, Containers, Security, Monitoring**  
-- Portfolio: GitHub + YouTube-ready projects  
+- Portfolio: GitHub + YouTube-ready projects
+
+---
+
+✍️ Created & Curated by  
+**Muhammad Naveed Ishaque**  
+_Content Creator | AI Writer | Narrative Simplifier_  
+_With the inner voice of Eks2 — the whisper behind the work._
+
+**Siraat AI Academy**  
+_“The Straight Path — Empowering minds with clarity, illuminating paths with purpose.”_
+
